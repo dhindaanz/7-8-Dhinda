@@ -30,11 +30,14 @@ Route::get('/gallery', function () {
 });*/
 
 Route::get('/', function () {
-    return view('Home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
-    return view ('About', [
+    return view ('about', [
+        "title" => "About",
         "nama" => "Dhinda Anniza Cahyaningwidhi",
         "email" => "dhindaannis@gmail.com",
         "gambar" => "dhinda.jpeg"
@@ -42,5 +45,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view ('Gallery');
+    return view ('gallery',[
+        "title" => "Gallery"
+    ]);
 });
